@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: github_document
 ---
 
-**Student ID:insert ** 2200000997
+**Student ID:insert ID ** 2200000997
 
 **Deadline:** 23:59 on Saturday, 13 February 2021
 

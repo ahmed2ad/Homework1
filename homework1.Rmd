@@ -1,11 +1,11 @@
 ---
 title: "Homework #1 -- Pet Names Dataset"
-author: "Musab Isah\n"
+author: "Ahmed adnan"
 date: "`r Sys.Date()`"
 output: github_document
 ---
 
-**Student ID:insert ID here**
+**Student ID:insert ID here** 2200000997
 
 **Deadline:** 23:59 on Saturday, 13 February 2021
 
@@ -28,7 +28,8 @@ library(ggrepel)
 
 (4 points)
 ```{r}
-
+seattlepets %>%
+count(animal_name, sort = TRUE)
 ```
 Write your narrative here
 
@@ -39,7 +40,9 @@ Write your narrative here
 (4 points)
 
 ```{r}
-
+seattlepets %>%
+group_by(species) %>%
+count(animal_name, sort = TRUE)
 ```
 Write your narrative below
 
@@ -49,7 +52,8 @@ Write your narrative below
 (4 points)
 
 ```{r}
-
+seattlepets %>%
+count(species, sort = TRUE)
 ```
 Write your narrative here
 
@@ -60,7 +64,10 @@ Write your narrative here
 (10 points)
 
 ```{r species-name-top5, eval=TRUE}
-
+seattlepets %>%
+group_by(species) %>%
+count(animal_name, sort = TRUE) %>%
+slice_max(n, n = 5)
 ```
 
 `5.  What names are more common for cats than dogs? The ones above the line or the ones below the line?
